@@ -1,17 +1,38 @@
-Release Notes [![Build Status](https://secure.travis-ci.org/jolira/release-notes.png?branch=master)](http://travis-ci.org/jolira/release-notes)
+Yet Another connect-less [![Build Status](https://secure.travis-ci.org/jolira/connect-less-jolira.png?branch=master)](http://travis-ci.org/jolira/connect-less-jolira)
 ========================================================================================================================
 
-Getting Started
-------------------------------------------------------------------------------------------------------------------------
+The other existing [less](lesscss.org) handlers for connect.js did not quite work for the
+[site-manager](https://github.com/jolira/site-manager). We needed a bit more flexibility than
+the other implementations had.
 
-Node.js 0.6 or better needs to be installed on your system. If you do not have node installed yet, please go to
-http://nodejs.org/, download the package for your operating system, and install it.
+This version supports passing multiple directories, which are all searched for less files. The
+less files are compiled when requested the first time, unless debugging is enabled.
 
-Install npm for package management, please go to http://npmjs.org/.
+## Installation
 
-Once node and npm are install, you can install release notes dependencies using `npm install -d`.
+```
+npm install connect-less-jolira
+```
 
-To run release-notes execute the following:
-`node build-repo​rt.js http://jenkins.jolira.com/ test`
 
-Now that you have tested your setup you can modify `approved.txt` file and point to your Jenkins server.
+## Example
+
+Search for .less files in ``/var/www`` and ``/home/fido/www``:
+
+```
+var connect = require("connect"),
+    less = require("connect-less-jolira"),
+    app = connect.createServer();
+app.use(less(["/var/www", "/home/fido/www"]));
+```
+
+Any file with extenstion ``.less`` will be compiled on-demand and returned as ``text/css`.
+
+
+## Logs
+
+Logs can be turned on using:
+
+```
+export NODE_DEBUG="connect-less"
+```

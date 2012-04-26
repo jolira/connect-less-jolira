@@ -10,7 +10,7 @@
     vows.describe('debug').addBatch({
         'with output turned on': {
             topic: function () {
-                process.env.NODE_DEBUG = "release-notes";
+                process.env.NODE_DEBUG = "connect-less";
                 debug("test1");
                 this.callback();
             },
