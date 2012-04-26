@@ -1,0 +1,30 @@
+{
+    "name":"connect-less-jolira",
+    "version":"0.0.1",
+    "description":"Yet another connect handler implementation for less",
+    "keywords":["less", "connect", "lesscss", "connect.js"],
+    "contributors": [
+        "Joachim Kainz <jfk@jolira.com> (http://www.jolira.com)"
+    ],
+    "repository":{
+        "url":"https://github.com/jolira/connect-less-jolira.git",
+        "type":"git"
+    },
+    "devDependencies":{
+        "debug":"*",
+        "horaa":"*",
+        "vows":"*",
+        "jake":"*"
+    },
+    "dependencies":{
+        "less":"*"
+    },
+    "bugs":{
+        "mail":"dev@jolira.com",
+        "url":"http://github.com/jolira/connect-less-jolira/issues"
+    },
+    "main":"index",
+    "engines":{
+        "node":">= 0.6.15 < 0.7.0"
+    }
+}
