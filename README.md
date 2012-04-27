@@ -26,7 +26,12 @@ var connect = require("connect"),
 app.use(less(["/var/www", "/home/fido/www"]));
 ```
 
-Any file with extenstion ``.less`` will be compiled on-demand and returned as ``text/css`.
+Any file with extenstion ``.less`` will be compiled on-demand and returned as ``text/css`. E.g.
+
+'''
+<link rel="stylesheet" href="twitterbootstrap/less/bootstrap.less">
+<link rel="stylesheet" href="twitterbootstrap/less/responsive.less">
+'''
 
 
 ## Logs
