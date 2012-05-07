@@ -1,6 +1,6 @@
 {
     "name":"connect-less-jolira",
-    "version":"0.0.2",
+    "version":"0.0.3",
     "description":"Yet another connect handler implementation for less",
     "keywords":["less", "connect", "lesscss", "connect.js"],
     "contributors": [
